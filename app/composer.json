@@ -1,5 +1,12 @@
 {
     "name": "jnicklr/app",
     "type": "project",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/Framework/",
+            "App\\Infrastructure\\Controller\\": "src/App/Infrastructure/Controller/",
+            "App\\Infrastructure\\Views\\": "src/App/Infrastructure/Views/"
+        }
+    }
 }
