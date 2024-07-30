@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Controller;
+namespace App\Infrastructure\Http\Controllers;
 
 use Framework\Controller;
 use Framework\Response;
