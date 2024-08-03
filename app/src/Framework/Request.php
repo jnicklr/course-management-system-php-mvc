@@ -11,7 +11,8 @@ class Request
         public array $post,
         public array $files,
         public array $cookies,
-        public array $server
+        public array $server,
+        public array $session
     ){}
 
     public static function createFromGlobals()
@@ -23,7 +24,8 @@ class Request
             $_POST,
             $_FILES,
             $_COOKIE,
-            $_SERVER
+            $_SERVER,
+            $_SESSION
         );
     }
 }
