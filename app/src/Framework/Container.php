@@ -41,6 +41,6 @@ class Container
 
     public function build(string $class): object
     {
-        return new $class($this->getDependencies($class));
+        return new $class(...$this->getDependencies($class));
     }
 }

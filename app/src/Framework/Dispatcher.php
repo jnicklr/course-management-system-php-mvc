@@ -17,6 +17,13 @@ class Dispatcher
     {
         $route = $this->router->match($request->uri, $request->method);
 
+        if (!$route){
+            $response = new Response();
+            $response->setStatusCode(404);
+            $response->setBody('Not found');
+            return $response;
+        }
+        
         $controller = $this->container->build($route['controller']);
 
         $controller->setViewer($this->container->build(TemplateViewer::class));
