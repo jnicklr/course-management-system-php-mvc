@@ -3,18 +3,21 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: './ts',
   build: {
-    outDir: '../public/js',
+    outDir: '../public',
     rollupOptions: {
       input: {
-        main: './ts/index.ts',
+        main: './resources/ts/index.ts',
+        styles: './resources/css/main.css'
       },
       output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: 'chunk.js',
-        assetFileNames: 'assets/[name][extname]'
-      }
+        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'js/chunk.js',
+        assetFileNames: 'css/[name][extname]'
+      },
+      treeshake: true,
+      external: ['/public/img/**']
     },
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
   resolve: {
     alias: {

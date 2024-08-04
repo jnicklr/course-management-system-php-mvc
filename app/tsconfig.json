@@ -4,10 +4,10 @@
         "target": "ES2020",
         "module": "NodeNext",
         "outDir": "./public/js",
-        "rootDir": "./ts",
+        "rootDir": "./resources/ts",
         "strict": true,
         "sourceMap": true,
         "esModuleInterop": true,
     }, 
-    "include": ["ts/**/*"]
+    "include": ["./resources/ts/**/*"]
 }
