@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "watch": "browser-sync start --config bs.config.cjs",
+    "watch:php": "chokidar 'src/App/Infrastructure/Views/**/*.php' -c 'npm run build'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,6 +17,8 @@
     "@types/jquery": "^3.5.30",
     "@types/node": "^22.1.0",
     "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.2",
+    "chokidar-cli": "^3.0.0",
     "postcss": "^8.4.40",
     "tailwindcss": "^3.4.7",
     "ts-node": "^10.9.2",

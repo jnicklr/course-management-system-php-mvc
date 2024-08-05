@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: './ts',
+  root: './resources',
   build: {
     outDir: '../public',
     rollupOptions: {
@@ -21,7 +21,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': '/ts',
+      '@': '/resources/ts',
     }
   }
 });
