@@ -9,6 +9,6 @@ class Home extends Controller
 {
     public function index(): Response
     {
-        return $this->view('index');
+        return $this->view('home');
     }
 }
