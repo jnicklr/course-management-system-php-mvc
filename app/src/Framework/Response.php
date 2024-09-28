@@ -6,7 +6,7 @@ class Response
 {
     private string $body;
     private array $headers = [];
-    private int $status_code = 0;
+    private int $status_code = 200;
 
     public function setStatusCode(int $status_code): void
     {
@@ -45,6 +45,8 @@ class Response
             header($header);
         }
 
-        echo $this->body;
+        if ($this->status_code < 300 || $this->status_code >= 400) {
+            echo $this->body;
+        }
     }
 }
