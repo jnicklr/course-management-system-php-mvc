@@ -30,6 +30,14 @@ class Controller
         return $this->response;        
     }
 
+    protected function json(array $data = []): Response
+    {
+        $json = json_encode($data);
+        $this->response->setBody($json);
+
+        return $this->response;        
+    }
+
     protected function redirect(string $url): Response
     {
         $this->response->redirect($url);
