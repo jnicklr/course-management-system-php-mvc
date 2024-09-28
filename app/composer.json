@@ -5,12 +5,16 @@
     "autoload": {
         "psr-4": {
             "Framework\\": "src/Framework/",
+            "Framework\\Exceptions\\": "src/Framework/Exceptions/",
+            "Framework\\Responses\\": "src/Framework/Responses/",
             "App\\Domain\\Entities\\": "src/App/Domain/Entities/",
             "App\\Domain\\Repositories\\": "src/App/Domain/Repositories/",
+            "App\\Infrastructure\\Exceptions\\": "src/App/Infrastructure/Exceptions/",
             "App\\Infrastructure\\Http\\Controllers\\": "src/App/Infrastructure/Http/Controllers/",
             "App\\Infrastructure\\Http\\Requests\\": "src/App/Infrastructure/Http/Requests/",
             "App\\Infrastructure\\Http\\Responses\\": "src/App/Infrastructure/Http/Responses/",
             "App\\Infrastructure\\Http\\Services\\": "src/App/Infrastructure/Http/Services/",
+            "App\\Infrastructure\\Http\\Middlewares\\": "src/App/Infrastructure/Http/Middlewares/",
             "App\\Infrastructure\\Persistence\\": "src/App/Infrastructure/Persistence/",
             "App\\Infrastructure\\Persistence\\Repositories\\": "src/App/Infrastructure/Persistence/Repositories/",
             "App\\Infrastructure\\Views\\": "src/App/Infrastructure/Views/"
