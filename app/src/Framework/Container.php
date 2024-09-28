@@ -29,7 +29,12 @@ class Container
                 $parameterType = $parameter->getType();
                 if ($parameterType !== null) {
                     $dependencyClass = $parameterType->getName();
-                    $dependencies[$parameter->getName()] = new $dependencyClass(...$this->getDependencies($dependencyClass));
+
+                    if ($this->getService($dependencyClass)){
+                        $dependencies[$parameter->getName()] = $this->getService($dependencyClass);
+                    } else {
+                        $dependencies[$parameter->getName()] = new $dependencyClass(...$this->getDependencies($dependencyClass));
+                    }
                 } else {
                     throw new \Exception("Parameter type not found for {$parameter->getName()} in class $class");
                 }
